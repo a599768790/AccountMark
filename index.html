@@ -9,7 +9,9 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimum-scale=1.0">
 		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/index.css">
+        <script type="text/javascript" src="js/rem.js" ></script>
+        <script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
         <title>H5Demo</title>
         <style>
             body{
@@ -27,10 +29,66 @@
                 line-height: 0.9rem;
                 width:100%;
             }
+            .header-bottom{
+                position: fixed;
+                z-index: 99;
+                width:100%;
+            }
+            span.menu {
+                width:0.7rem;
+                height: 0.7rem;
+                background: url(images/nav.png)no-repeat 0px 0px;
+                display: block;
+                cursor: pointer;
+                /* margin:0.2rem 0.2rem 0 0.2rem; */
+                margin:0.2rem;
+            }
+            .top-menu{
+                position: fixed;
+                width:100%;
+            }
+            .top-menu ul li{
+                width:100%;
+                padding:0.1rem;
+                text-align: center;
+                font-size:0.28rem;
+            }
+            .top-menu ul li a.active {
+                background: #1fadc5;
+                color: #fff;
+            }
         </style>
 	</head>
 	<body>
-    <div class="inupt_div">
+        <div class="header-bottom">
+                <span class="menu"></span>
+                <div class="top-menu">
+                    <ul>
+                        <li><a class="active" href="index.html">Home</a></li> 
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="404.html">SERVICES</a></li> 
+                        <li><a href="portfolio.html">PORTFOLIO</a></li> 
+                        <li><a href="#blog" class="scroll">BLOG</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>1111</div>
+                <div>1111</div>
+                <div>1111</div>
+                <div>1111</div>
+                <div>1111</div>
+                <script>
+                    $(function(){
+                        $( "span.menu" ).click(function() {
+                            $( ".top-menu" ).slideToggle( "slow", function() {
+                            // Animation complete.
+                            });
+                         });
+                    });
+                
+                </script>
+        </div>
+    <!-- <div class="inupt_div">
         <div class="div_1">
             <input type="text" name="user" placeholder="请输入用户名" autocomplete="off"/>
         </div>
@@ -38,8 +96,8 @@
                 <input type="password" placeholder="请输入密码" name="password"/>
         </div>
         
-    </div>
-    <div>04152327</div>>
-	<script type="text/javascript" src="js/rem.js" ></script>
+    </div> -->
+
+    
 	</body>
 </html>
